@@ -8,7 +8,7 @@ const mapStyles = {
   height: '50vh',
 };
 
-const Shelters = () => {
+const Shelters = ({ onScreen }) => {
   return (
     <div className="shelters__container">
       <Container>
@@ -34,7 +34,7 @@ const Shelters = () => {
           </div>
         </Row>
         <Row>
-          <button>Powrót</button>
+          <button onClick={() => onScreen('main-menu')}>Powrót</button>
         </Row>
       </Container>
     </div>

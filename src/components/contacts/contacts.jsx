@@ -2,7 +2,7 @@ import { Container, Row, Table } from "react-bootstrap";
 
 import './contacts.scss';
 
-const Contacts = () => {
+const Contacts = ({ onScreen }) => {
   return (
     <div className="contacts__container">
       <Container>
@@ -57,7 +57,7 @@ const Contacts = () => {
           </Table>
         </Row>
         <Row>
-          <button>Powrót</button>
+          <button onClick={() => onScreen('main-menu')}>Powrót</button>
         </Row>
       </Container>
     </div>

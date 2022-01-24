@@ -5,7 +5,7 @@ import WeatherApi from "../../helpers/weather-api";
 
 import './main-menu.scss';
 
-const MainMenu = () => {
+const MainMenu = ({ onScreen }) => {
   const [weather, setWeather] = useState();
   
   const weatherApi = new WeatherApi('katowice');
@@ -58,11 +58,11 @@ const MainMenu = () => {
         </Row>
         <Row>
           <div className="main-menu__container-buttons">
-            <button>Znajdź schronienie</button>
-            <button>Znajdź posiłek</button>
-            <button>Znajdź pomoc</button>
-            <button>Informacje</button>
-            <button>Numery alarmowe</button>
+            <button onClick={() => onScreen('shelters')}>Znajdź schronienie</button>
+            <button onClick={() => onScreen('eateries')}>Znajdź posiłek</button>
+            <button onClick={() => onScreen('helpcenters')}>Znajdź pomoc</button>
+            <button onClick={() => onScreen('informations')}>Informacje</button>
+            <button onClick={() => onScreen('contacts')}>Numery alarmowe</button>
           </div>
         </Row>
         <Row>

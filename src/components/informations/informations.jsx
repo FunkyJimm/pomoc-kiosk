@@ -17,7 +17,7 @@ const informationsList = informations => {
   )
 }
 
-const Informations = () => {
+const Informations = ({ onScreen }) => {
   const [informations, setInformations] = useState();
 
   const pomocApi = new PomocApi('informations');
@@ -48,7 +48,7 @@ const Informations = () => {
             </Table>
           </Row>
           <Row>
-            <button>Powrót</button>
+            <button onClick={() => onScreen('main-menu')}>Powrót</button>
           </Row>
         </Container>
       </div>
@@ -64,7 +64,7 @@ const Informations = () => {
             <p>Nie ma aktualnych informacji...</p>
           </Row>
           <Row>
-            <button>Powrót</button>
+            <button onClick={() => onScreen('main-menu')}>Powrót</button>
           </Row>
         </Container>
       </div>
