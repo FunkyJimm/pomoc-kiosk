@@ -2,19 +2,33 @@ import { useEffect, useState } from 'react';
 import { Container, Row } from "react-bootstrap";
 
 import WeatherApi from "../../helpers/weather-api";
+import PomocApi from '../../helpers/pomoc-api';
 
 import './main-menu.scss';
 
+const informationsBar = informations => {
+  let text = '';
+
+  for (let index in informations) {
+    text = text.concat(informations[index].description, ' | ');
+  }
+
+  return text.slice(0, -3);
+}
+
 const MainMenu = ({ onScreen }) => {
   const [weather, setWeather] = useState();
+  const [informations, setInformations] = useState();
   
   const weatherApi = new WeatherApi('katowice');
+  const pomocApi = new PomocApi('informations');
 
   useEffect(() => {
     weatherApi.getWeather(setWeather);
+    pomocApi.getData(setInformations);
   }, []);
 
-  const weatherInfo = () => {
+  const weatherInfo = weather => {
     if (weather) {
       const { main } = weather;
       
@@ -53,7 +67,7 @@ const MainMenu = ({ onScreen }) => {
         </Row>
         <Row>
           <div className="main-menu__container-weather">
-            {weatherInfo()}
+            {weather && weatherInfo(weather)}
           </div>
         </Row>
         <Row>
@@ -67,7 +81,7 @@ const MainMenu = ({ onScreen }) => {
         </Row>
         <Row>
           <div className="main-menu__container-info">
-            <p>Treść informacji</p>
+            <marquee loop="-1" scrollamount="10">{informations ? informationsBar(informations.data) : "Nie ma aktualnych informacji..."}</marquee>
           </div>
         </Row>
       </Container>
