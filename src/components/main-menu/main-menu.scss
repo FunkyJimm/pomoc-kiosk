@@ -1,11 +1,19 @@
 .main-menu__container {
   background-color: blue;
-  width: 100vw;
+  width: 90vw;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
 
   &-weather {
     height: 10vh;
@@ -16,7 +24,7 @@
   }
 
   &-buttons {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;

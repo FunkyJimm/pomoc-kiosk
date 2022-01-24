@@ -39,7 +39,7 @@ const MainMenu = () => {
       )
     } else {
       return (
-        <p>Pogoda jest aktualnie niedostępna...</p>
+        <p>Pogoda aktualnie jest niedostępna...</p>
       )
     }
   }
@@ -69,9 +69,6 @@ const MainMenu = () => {
           <div className="main-menu__container-info">
             <p>Treść informacji</p>
           </div>
-        </Row>
-        <Row>
-          <p>Pomoc dla bezdomnego. BPL Team 2022, all rights reserved.</p>
         </Row>
       </Container>
     </div>

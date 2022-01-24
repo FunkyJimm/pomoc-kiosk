@@ -10,7 +10,10 @@ class WeatherApi {
   getWeather = setState => {
     fetch(API_URL + '/weather?q=' + this.location + '&appid=' + Config.API_KEY + '&units=metric')
     .then(res => res.json())
-    .then(weather => setState(weather))
+    .then(weather => setState(weather),
+    (error) => {
+      console.log(error);
+    })
     .catch(err => console.log(err));
   }
 }

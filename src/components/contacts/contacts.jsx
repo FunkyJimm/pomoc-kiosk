@@ -1,5 +1,7 @@
 import { Container, Row, Table } from "react-bootstrap";
 
+import './contacts.scss';
+
 const Contacts = () => {
   return (
     <div className="contacts__container">
