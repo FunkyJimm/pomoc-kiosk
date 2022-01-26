@@ -3,7 +3,9 @@ import { useState } from 'react';
 import './App.scss';
 
 import Contacts from './components/contacts/contacts';
+import Eateries from './components/eateries/eateries';
 import Footer from './components/footer/footer';
+import HelpCenters from './components/helpcenters/help-centers';
 import Informations from './components/informations/informations';
 import MainMenu from './components/main-menu/main-menu';
 import Shelters from './components/shelters/shelters';
@@ -17,6 +19,10 @@ function App() {
         return <MainMenu onScreen={handleScreen} />
       case 'shelters':
         return <Shelters onScreen={handleScreen} />
+      case 'eateries':
+        return <Eateries onScreen={handleScreen} />
+      case 'helpcenters':
+        return <HelpCenters onScreen={handleScreen} />
       case 'informations':
         return <Informations onScreen={handleScreen} />
       case 'contacts':
