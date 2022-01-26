@@ -34,10 +34,10 @@ const MainMenu = ({ onScreen }) => {
       
       let warningMessage = '';
       let warningTextColor = '';
-      if (main.temp < 10 && main.temp > 0) {
+      if (main.temp < 10 && main.temp > 5) {
         warningMessage = 'Dzisiaj w nocy będzie chłodno. Prosimy zachować ostrożność.';
         warningTextColor = '#000';
-      } else if (main.temp < 0 && main.temp > -10) {
+      } else if (main.temp < 5 && main.temp > -10) {
         warningMessage = 'Dzisiaj w nocy będzie zimno. Powinieneś poszukać pomocy!';
         warningTextColor = '#ffff00';
       } else if (main.temp < -10) {
@@ -47,7 +47,7 @@ const MainMenu = ({ onScreen }) => {
 
       return (
         <>
-          <p>Aktualna temperatura na zewnątrz: {Math.round(main.temp)}*C</p>
+          <p>Aktualna temperatura na zewnątrz: <b>{Math.round(main.temp)}*C</b></p>
           <p style={{ color: warningTextColor }}>{warningMessage}</p>
         </>
       )
@@ -63,7 +63,7 @@ const MainMenu = ({ onScreen }) => {
       <Container>
         <Row>
           <h1>Pomoc dla bezdomnego</h1>
-          <h2>Wersja alpha 0.1</h2>
+          {/* <h2>Wersja 1.0</h2> */}
         </Row>
         <Row>
           <div className="main-menu__container-weather">

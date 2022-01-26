@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 const mapStyles = {
-  width: '50vw',
+  width: '100vw',
   height: '50vh',
 };
 
@@ -20,7 +20,8 @@ const Map = ({ locations, index }) => {
   return (
     <MapContainer 
       center={[coordinates.lat, coordinates.lon]} 
-      zoom={13} style={mapStyles} 
+      zoom={13} 
+      style={mapStyles} 
       scrollWheelZoom={false}
       whenCreated={setMap}
     >

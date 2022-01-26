@@ -4,4 +4,25 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  table {
+    color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  button {
+    height: 80px;
+  }
 }

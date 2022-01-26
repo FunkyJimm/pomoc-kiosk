@@ -1,15 +1,9 @@
-.eateries__container {
+.helpcenters__container {
   width: 80vw;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-
-  &-map {
-    margin: 2vh 0;
-    display: flex;
-    justify-content: center;
-  }
 
   h1 {
     text-align: center;
@@ -17,6 +11,15 @@
 
   p {
     text-align: center;
+  }
+
+  table {
+    color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   button {

@@ -3,6 +3,8 @@ import { Accordion, Container, Row, Table } from 'react-bootstrap';
 
 import PomocApi from '../../helpers/pomoc-api';
 
+import './help-centers.scss';
+
 const helpCentersList = helpcenters => {
   return (
     helpcenters.map((helpcenter, index) => (
@@ -19,7 +21,7 @@ const helpCentersList = helpcenters => {
   )
 }
 
-const HelpCenters = () => {
+const HelpCenters = ({ onScreen }) => {
   const [helpcenters, setHelpCenters] = useState();
 
   const pomocApi = new PomocApi('helpcenter');
@@ -51,6 +53,9 @@ const HelpCenters = () => {
               { helpcenters && helpCentersList(helpcenters.data) }
             </tbody>
           </Table>
+        </Row>
+        <Row>
+          <button onClick={() => onScreen('main-menu')}>Powrót</button>
         </Row>
       </Container>
     </div>

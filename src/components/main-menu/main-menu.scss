@@ -1,5 +1,5 @@
 .main-menu__container {
-  background-color: blue;
+  background-color: #303030;
   width: 90vw;
   height: 100vh;
   display: flex;
@@ -8,6 +8,7 @@
   align-items: center;
 
   h1 {
+    font-size: 3rem;
     text-align: center;
   }
 
@@ -28,16 +29,21 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    align-items: center;
 
     button {
-      width: 100%;
-      height: 10%;
+      width: 50%;
+      height: 15%;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
   }
 
   &-info {
     height: 10vh;
     font-size: 2rem;
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;

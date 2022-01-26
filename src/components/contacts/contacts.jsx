@@ -13,7 +13,7 @@ const Contacts = ({ onScreen }) => {
           <p>W tym miejscu możesz zadzwonić pod jeden z dostępnych numerów, w celu otrzymania pomocy.</p>
         </Row>
         <Row>
-          <Table bordered hover>
+          <Table striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>Nazwa</th>
